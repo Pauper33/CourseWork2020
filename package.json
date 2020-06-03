@@ -1,0 +1,25 @@
+{
+  "name": "socketchat",
+  "version": "1.0.0",
+  "description": "SocketChat for course work",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pauper33/CourseWork2020.git"
+  },
+  "author": "Denis Shkurko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pauper33/CourseWork2020/issues"
+  },
+  "homepage": "https://github.com/Pauper33/CourseWork2020#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "socket-io": "^1.0.0"
+  }
+}
