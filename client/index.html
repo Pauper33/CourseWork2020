@@ -1,12 +1,27 @@
 <!DOCTYPE html>
+<html lang="en"></html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>socketChat</title>
-    </head>
-    <body>
-        <div id="app">
-            <p>Hello World</p>
-        </div>
-    </body>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>socketChat</title>
+  </head>
+  <body>
+    <table>
+      <th>
+        <input id="username" cols="100" rows="1" placeholder="your username:"></input>
+        <br>
+      
+        <textarea id="messages" cols="100" rows="10" readonly></textarea>
+        <br>
+      
+        <textarea id="send-message" cols="100" rows="3" placeholder="your message:"></textarea>
+        <br>
+        <button id="send">Send</button>
+      </th>
+    </table>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+    <script src="./client/client.js"></script>
+  </body>
 </html>
