@@ -11,18 +11,26 @@ const fild_username = getEl('username');
 const fild_message = getEl('messages');
 const fild_send_message = getEl('send-message');
 const button_send = getEl('send');
+const button_reload = getEl('reload');
 
 button_send.addEventListener('click', () => {
   sendMessage();
 });
 
-const sendMessage = () => {
-  socket.emit('Send message', { message: fild_send_message.value });
-  fild_send_message.value = '';
-}
-
-socket.on('Add message', (data) => {
-  fild_message.value += data.message;
+button_reload.addEventListener('click', () => {
+  socket.emit('Reload chat', {})
 });
 
+const sendMessage = () => {
+
+  socket.emit('Send message', { 
+    message: fild_send_message.value,
+    name: fild_username.value
+  });
+  fild_send_message.value = '';
+};
+
+socket.on('Read message', (data) => {
+  fild_message.textContent = data.message;
+});
 
